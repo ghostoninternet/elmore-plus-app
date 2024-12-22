@@ -1,7 +1,7 @@
-export default function PostTextContent() {
+export default function PostTextContent({ isDisplayFullText = false }) {
   return (
     <div className=" w-full">
-      <p className="text-sm w-full line-clamp-6 mb-3 ">
+      <p className={isDisplayFullText ? "text-sm" : "text-sm line-clamp-3"}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fuga dicta
         vitae voluptatem illo magni mollitia, asperiores minima id et aliquid
         harum porro dolorum! Vel quidem reprehenderit distinctio tenetur
