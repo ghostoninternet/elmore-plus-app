@@ -7,7 +7,7 @@ export default function NotificationPage() {
     <div className="w-full flex flex-row  ">
       <div className="w-2/3 border-r-[1px] border-blue-300">
         <div className="relative w-full px-20 pt-2 pb-32 ">
-          <h2 className=" text-2xl font-semibold">Notifications</h2>
+          <h2 className=" text-2xl font-semibold mt-6 mb-6">Notifications</h2>
 
           <div className="flex flex-col gap-4 mt-5">
             <NotificationItem
