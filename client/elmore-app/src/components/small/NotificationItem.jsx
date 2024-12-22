@@ -15,7 +15,11 @@ export default function NotificationItem({
   return (
     <Link
       to={link}
-      className={hasRead ? "" : "border-l-2 border-blue-300 bg-blue-100/20"}
+      className={
+        hasRead
+          ? "border-l-2 border-gray-50"
+          : "border-l-2 border-blue-300 bg-blue-100/20"
+      }
       onClick={() => {
         setHasRead(!hasRead);
       }}

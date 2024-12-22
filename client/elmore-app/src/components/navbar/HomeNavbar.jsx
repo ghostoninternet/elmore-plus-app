@@ -9,16 +9,9 @@ import {
   faIdCard,
   faQuestionCircle,
   faRightFromBracket,
-  faRocket,
   faSignal,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  Input,
-  Avatar,
-  Typography,
-  Badge,
-  Button,
-} from "@material-tailwind/react";
+import { Avatar, Typography, Badge, Button } from "@material-tailwind/react";
 import {
   Menu,
   MenuHandler,
@@ -27,6 +20,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import SearchNavbarInput from "../input/SearchNavbarInput";
 export default function HomeNavbar() {
   const [showBadge, setShowBadge] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
@@ -44,7 +38,7 @@ export default function HomeNavbar() {
       //todo: Check new chat coming before set show badge to "true"
       setShowBadge(true);
     }
-  });
+  }, [location]);
 
   return (
     <>
@@ -54,11 +48,7 @@ export default function HomeNavbar() {
         </div>
         <div className=" w-5/12 h-full flex justify-center items-center">
           <div className=" w-7/12 h-full flex flex-col justify-center">
-            <Input
-              variant="outlined"
-              label="Search"
-              icon={<FontAwesomeIcon icon={faRocket} />}
-            />
+            <SearchNavbarInput />
           </div>
         </div>
         <div className="w-1/4 flex flex-row items-center justify-start gap-8">
